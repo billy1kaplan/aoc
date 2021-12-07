@@ -73,7 +73,8 @@ class Solution {
         // XOR 00000000000...01001
         // ... 00000000000...11111
         // ... 00000000000...10110
-        int epsilonRate = gammaRate ^ Integer.parseInt(new String(new char[integerSize]).replace("\0", "1"), 2);
+        // int epsilonRate = gammaRate ^ Integer.parseInt(new String(new char[integerSize]).replace("\0", "1"), 2);
+        int epsilonRate = gammaRate ^ Integer.parseInt("1".repeat(integerSize), 2);
 
         return gammaRate * epsilonRate;
     }
